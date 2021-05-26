@@ -1,24 +1,46 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-sm-offset-2">
       <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="name">Project name</label>
-            <input type="text" id="name" class="form-control" formControlName="projectName">
+            <input type="text" id="name" class="form-control" formControlName="projectName" placeholder="projectName">
         </div>
         <div class="form-group">
-          <label for="mail">Mail</label>
-            <input type="email" id="mail" class="form-control" formControlName="email">
+          <div class="col-xs-12">
+            <label for="fname">FirstName</label>
+              <input type="text" id="fname" class="form-control" formControlName="FirstName" placeholder="FirstName">
+          </div>
+          <br>
+          <div class="col-xs-12">
+            <label for="lname">LastName</label>
+              <input type="text" id="lname" class="form-control" formControlName="LastName" placeholder="LastName">
+          </div>
         </div>
+
+        <div class="form-group">
+          <label for="mail">Email</label>
+            <input type="email" id="mail" class="form-control" formControlName="email" placeholder="EmailID">
+        </div>
+
+        <div class="form-group">
+          <label for="psw">Password</label>
+            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
+        </div>
+
         <div class="form-group">
           <label for="status">Project Status</label>
-            <select id="status" class="form-control" formControlName="projectStatus">
+            <select id="status" class="form-control" formControlName="projectStatus" placeholder="ProjectStatus">
               <option value="stable">Stable</option>
               <option value="critical">Critical</option>
               <option value="finished">Finished</option>
             </select>
         </div>
-        <button class="btn btn-primary" type="submit">Create Project</button>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Create Project  </button>
+          <button class="btn btn-danger" type="reset">  Cancel</button>
+        </div>
       </form>
     </div>
   </div>
